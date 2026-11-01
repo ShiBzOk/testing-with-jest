@@ -33,3 +33,7 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+test('Heading displays correct main title', async () => {
+    let heading = await driver.findElement(By.css('h1')).getText();
+    expect(heading).toEqual("Felaktig rubrik");
+});
